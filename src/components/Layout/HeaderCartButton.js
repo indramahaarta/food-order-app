@@ -9,7 +9,7 @@ const HeaderCartButton = (props) => {
 
   const cardItem = useContext(CartContext);
   const cartItemVal = cardItem.items.reduce((cur, item) => cur + item.amount, 0);
-  const headerCartButtonClass = `${classes.button} ${bumpIsUsing? classes.bump : ''}`
+  const headerCartButtonClass = `${classes.button} ${bumpIsUsing? classes.bump : ''} ${props.isShrink? classes.shrink: ''}`
 
   useEffect(() => {
     setBumpIsUsing(true)
